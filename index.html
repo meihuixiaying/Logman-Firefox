@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LogMan Application</title>
+
+    <meta name="description" content="A application for Collect fault log">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+
+    <script type="text/javascript" src="js/storageLocal.js"></script>
+
+    <script type="text/javascript" src="js/index.js" defer></script>
+
+    <link rel="prefetch" type="application/l10n" href="data/locales.ini"/>
+    <script type="text/javascript" src="js/libs/l10n.js" defer></script>
+    <script type="text/javascript" src="js/bugItem.js" defer></script>
+</head>
+<body>
+
+<div id="window">
+    <input style="margin-top: 30px;" type="image" src="img/t2m.png">
+    <table class="main">
+        <tr>
+            <td id="call" class="fun">
+                <input type="image" src="img/phone.png">
+                <br>
+                <span data-l10n-id="module_call"> 通话 </span>
+            </td>
+            <td id="message" class="fun">
+                <input type="image" src="img/message.png">
+                <br>
+                <span data-l10n-id="module_message"> 短信 </span>
+            </td>
+            <td id="contact" class="fun">
+                <input type="image" src="img/contacts.png">
+                <br>
+                <span data-l10n-id="module_contact"> 联系人 </span>
+            </td>
+            <td id="network" class="fun">
+                <input type="image" src="img/network.png">
+                <br>
+                <span data-l10n-id="module_network"> 网络 </span>
+            </td>
+        </tr>
+        <tr>
+            <td id="wifi" class="fun">
+                <input type="image" src="img/wifi.png">
+                <br>
+                <span data-l10n-id="module_wifi"> WIFI&BT </span>
+            </td>
+            <td id="camera" class="fun">
+                <input type="image" src="img/camera.png">
+                <br>
+                <span data-l10n-id="module_camera"> 相机 </span>
+            </td>
+            <td id="apps" class="fun">
+                <input type="image" src="img/apps.png">
+                <br>
+                <span data-l10n-id="module_apps"> 应用 </span>
+            </td>
+            <td id="power" class="fun">
+                <input type="image" src="img/power.png">
+                <br>
+                <span data-l10n-id="module_power"> 功耗 </span>
+            </td>
+        </tr>
+        <tr>
+            <td id="others" class="fun">
+                <input type="image" src="img/more.png">
+                <br>
+                <span data-l10n-id="module_others"> 其它 </span>
+            </td>
+            <td id="config" class="fun">
+                <input type="image" src="img/cfg.png">
+                <br>
+                <span data-l10n-id="module_config"> 配置 </span>
+            </td>
+            <td id="suggestions" class="fun">
+                <input type="image" src="img/suggestion.png">
+                <br>
+                <span data-l10n-id="module_suggestion"> 建议 </span>
+            </td>
+            <td id="record" class="fun">
+                <input type="image" src="img/record.png">
+                <br>
+                <span data-l10n-id="module_logs"> 记录 </span>
+            </td>
+        </tr>
+    </table>
+</div>
+<iframe id="optionFrame" class="frameStyle" src="" hidden></iframe>
+<iframe id="recordFrame" class="frameStyle" name="recordFrame" src="pages/record.html" mozallowfullscreen="true" hidden></iframe>
+<iframe id="nextFrame" class="frameStyle" src="pages/config.html" mozallowfullscreen="true" hidden></iframe>
+</body>
+</html>

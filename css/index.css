@@ -1,0 +1,57 @@
+.main {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    padding: 5px;
+    width: 100%;
+    height: 46%;
+    table-layout: fixed;
+    empty-cells: show;
+}
+
+.main td {
+    border-radius: 5px;
+    border: solid 1px #2B7CE6;
+    background: radial-gradient(circle, #FAF5EB, #FFFAF0);
+    width: 25%;
+    height: 25%;
+}
+
+.main td input[type='image'] {
+    width: 24px;
+    height: 24px;
+}
+
+.main td:active {
+    background: radial-gradient(circle, #EBE6DC, #FFFAF0);
+}
+
+.main td[id="run"] {
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.main td[id="run"][sss] {
+    animation: ddd 1s linear infinite;
+}
+
+@keyframes ddd {
+    from {
+        background: #92f8ff;
+    }
+
+    to {
+        background: #08DAF0;
+    }
+}
+
+.frameStyle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}

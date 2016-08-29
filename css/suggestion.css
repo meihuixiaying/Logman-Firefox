@@ -1,0 +1,44 @@
+section[role='region'] > header .assist {
+    width: 20px;
+    height: 20px;
+    padding: 14px;
+    animation: assist_rotate 1.5S linear infinite;
+}
+
+.div_border {
+    border-radius: 5px;
+    border: solid 1px #2B7CE6;
+    width: 98%;
+}
+
+#submit {
+    margin-top: 5px;
+    height: 50px;
+    font-size: large;
+    text-align: center;
+    color: #585846;
+    background: linear-gradient(#F6F6F6, #EBEBEB, #F6F6F6) repeat scroll 0 0 #EBEBEB;
+    /*background: linear-gradient(#E1E1CC, #E1E1CC) repeat scroll 0 0 #E1E1CC;*/
+    outline: none;
+}
+
+#submit::-moz-focus-inner {
+    border: none;
+}
+
+#submit:active {
+    background: linear-gradient(#E0E0E0, #D0D0D0) repeat scroll 0 0 #D0D0D0;
+}
+
+#submit:disabled {
+    background: linear-gradient(#E0E0E0, #D0D0D0) repeat scroll 0 0 #D0D0D0;
+}
+
+#context {
+    height: 500px;
+    font-size: large;
+}
+
+
+
+

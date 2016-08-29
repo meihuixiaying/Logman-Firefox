@@ -1,0 +1,154 @@
+
+ul {
+    padding: 0px 5px;
+}
+
+.menuBG {
+    background: linear-gradient(#F0EBE1, #e6e1d7) repeat scroll 0 0 #FAF5EB;
+}
+
+.menuBorder {
+    border-bottom: solid 1px #2B7CE6;
+}
+
+.optionBG {
+    background: linear-gradient(#FFFAF0, #FAF5EB, #FFFAF0) repeat scroll 0 0 #FFFAF0;
+}
+
+.optionBorder {
+    border-top: solid 1px #FAE8E7;
+}
+
+li {
+    list-style: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: solid 1px #2B7CE6;
+    color: #585846;
+    font-size: medium;
+    text-align: left;
+}
+
+li > :first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+li > :last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+li > .menu {
+    padding: 10px;
+}
+
+li > .option {
+    border-top: solid 1px #2B7CE6;
+    border-bottom: solid 1px #2B7CE6;
+    padding: 8px 8px 8px 20px;
+}
+
+li > .option1 {
+    font-size: small;
+    padding: 8px 8px 8px 40px;
+    background: linear-gradient(#FFFFFF, #f5f5f5, #FFFFFF) repeat scroll 0 0 #FFFFFF;
+}
+
+li > .option2 {
+    font-size: small;
+    padding: 8px;
+    background: linear-gradient(#FFFFFF, #f5f5f5, #FFFFFF) repeat scroll 0 0 #FFFFFF;
+}
+
+li .assist {
+    float: right;
+    vertical-align: middle;
+}
+
+li .tag {
+    margin-right: 10px;
+    border-radius: 2px;
+    background: radial-gradient(circle, #FAF5EB, #FFFAF0);
+    border: solid 1px #2B7CE6;;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+
+.remainder {
+    font-style: oblique;
+}
+
+.log {
+    margin-top: 2px;
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    font-size: small;
+}
+
+.logRight {
+    margin-right: 20px;
+}
+
+.qxdm {
+    border: solid 1px #CDEA80;
+    background: radial-gradient(circle, #d7f489, #CDEA80);
+}
+
+.logcat {
+    border: solid 1px #FA8073;
+    background: radial-gradient(circle, #ff8375, #f37a72);
+}
+
+li .assist > input[rotate] {
+    animation: assist_rotate 2S linear infinite;
+}
+
+input::-moz-focus-inner {
+    border: none;
+}
+
+.img_h20 {
+    height: 20px;
+}
+
+.img_w20 {
+    width: 20px
+}
+
+.img_w40 {
+    width: 40px
+}
+
+input[type="range"]::-moz-range-track {
+    border: none;
+    background: #2B7CE6;
+}
+
+input[type="range"]::-moz-range-thumb {
+    border: 1px solid #2B7CE6;
+    background: radial-gradient(circle, #2B7CE6, #2c85f0, #2c8eff);
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+}
+
+input[type="radio"] {
+    margin-left: 0px;
+}
+
+li label:active {
+    background: none;
+}
+
+#in_qxdm_size {
+    width: 150px;
+    height: 20px;
+    border: none;
+    background: none;
+}
+

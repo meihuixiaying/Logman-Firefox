@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+
+    <link rel="stylesheet" href="../css/app.css">
+
+    <link rel="stylesheet" href="../css/headers.css">
+
+    <link rel="stylesheet" href="../css/bugRecord.css">
+
+
+    <link rel="prefetch" type="application/l10n" href="../data/locales.ini"/>
+
+    <script type="text/javascript" src="../js/libs/l10n.js" defer></script>
+
+    <script type="text/javascript" src="../js/storageDB.js"></script>
+
+    <script type="text/javascript" src="../js/storageLocal.js"></script>
+
+    <script type="text/javascript" src="../js/travel.js"></script>
+
+    <script type="text/javascript" src="../js/wifiStatus.js"></script>
+
+    <script type="text/javascript" src="../js/logCore.js"></script>
+
+    <script type="text/javascript" src="../js/bugItem.js" defer></script>
+
+    <script type="text/javascript" src="../js/bugRecord.js" defer></script>
+</head>
+
+<body>
+<section role="region">
+    <header class="title">
+
+        <input id="back" class="icon" type="image" img-site="left" src="../img/back.png">
+
+        <span data-l10n-id="module_logs" class="title"> 记录 </span>
+
+        <input id="assist_fresh" class="assist" type="image" hidden rotate src="../img/fresh.png">
+
+    </header>
+
+    <input id="uploadBar" hidden type="button">
+
+    <div>
+        <ul id="bug_content">
+        </ul>
+    </div>
+</section>
+</body>
+
+</html>

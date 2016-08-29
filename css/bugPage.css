@@ -1,0 +1,150 @@
+body {
+    background-color: #FFF6D8;
+}
+
+.SideInformation {
+    text-align: left;
+    width: 50%;
+    float: left;
+}
+
+input[type="button"]::-moz-focus-inner {
+    border: 1px;
+}
+
+input[type="button"]:active {
+    font-style: normal;
+    color: #8b8b79;
+    background-color: #8b8b79;
+}
+
+section[role='region'] > header .assist:active {
+    background-color: #2B7CE6;
+}
+
+#options {
+    text-align: left;
+    margin-left: 3px;
+}
+
+#titleText {
+    width: 97%;
+    height: 40px;
+    margin-top: 10px;
+    font-size: large;
+    padding-left: 5px;
+}
+
+#imgId {
+    display: none;
+}
+
+.toast_div {
+    width: 100%;
+    opacity: 0.8;
+    height: 100%;
+    text-align: left;
+    color: #2B7CE6;
+    padding-top: 100px;
+    line-height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-weight: normal;
+    background: black;
+    z-index: 101;
+    visibility: hidden;
+}
+
+.topcoat-button-bar__item > input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 2rem;
+    margin: 0 -2rem -2rem 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    opacity: 0.001;
+}
+
+.topcoat-button-bar__item {
+    margin-right: 10px;
+    margin-top: 10px;
+    display: inline-table;
+    width: auto;
+    border-radius: 20px;
+}
+
+.button,
+.topcoat-button-bar__button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    background-clip: padding-box;
+    color: inherit;
+    vertical-align: top;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font: inherit;
+    cursor: default;
+}
+
+.topcoat-button-bar__button {
+    font-size: small;
+    height: auto;
+    width: auto;
+    border: 1px solid #8b8b79;
+    outline: none;
+    font-weight: normal;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    padding: 8px 17px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    box-shadow: inset 1px 0px 14px 0px #cae3fc;
+}
+
+:checked + .topcoat-button-bar__button,
+.topcoat-button-bar__button:active,
+.topcoat-button-bar__button.is-active {
+    background-color: #cae3fc;
+}
+
+:root .ani_dot {
+
+    display: inline-block;
+    width: 1.5em;
+    vertical-align: bottom;
+    overflow: hidden;
+}
+
+@keyframes dot {
+    0% {
+        width: 0;
+        margin-right: 1.5em;
+    }
+    33% {
+        width: .5em;
+        margin-right: 1em;
+    }
+    66% {
+        width: 1em;
+        margin-right: .5em;
+    }
+    100% {
+        width: 1.5em;
+        margin-right: 0;
+    }
+}
+
+.ani_dot {
+    animation: dot 3s infinite step-start;
+}

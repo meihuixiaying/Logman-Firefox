@@ -1,0 +1,67 @@
+html, body {
+    margin: 0px;
+    height: 100%;
+    text-align: center;
+}
+
+section[role='region'] > header {
+    position: fixed;
+    top: 0px;
+
+    width: 100%;
+    height: 48px;
+
+    margin: 0px;
+    padding: 0px;
+
+    background: linear-gradient(#2b90ff, #2B7CE6) repeat scroll 0 0 #2B7CE6;
+    border: 1px solid #2B7CE6;
+    vertical-align: middle;
+    z-index: 10;
+}
+
+section[role='region'] > header input {
+    outline: none;
+}
+
+section[role='region'] > header .icon {
+    position: absolute;
+    left: 0px;
+}
+
+section[role='region'] > header .assist {
+    position: absolute;
+    right: 0px;
+}
+
+section[role='region'] > header .icon, section[role='region'] > header .assist {
+    width: 24px;
+    height: 24px;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+section[role='region'] > header .icon:active {
+    background-color: #2B7CE6;
+}
+
+section[role='region'] > header .title {
+    width: 100%;
+    height: 48px;
+    line-height: 50px;
+    font-family: sans-serif;
+    font-size: x-large;
+    color: #353527;
+}
+
+section[role='region']:nth-child(1) {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+}
+
+input {
+    outline: none;
+}
+
+

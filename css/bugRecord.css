@@ -1,0 +1,116 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+ */
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    position: relative;
+    list-style: none;
+    vertical-align: middle;
+    border: solid 1px #2B7CE6;
+    background: linear-gradient(#B7C4D9, #B7C4D9, #B7C4D9) repeat scroll 0 0 #B7C4D9;
+    height: 70px;
+    margin-top: 10px;
+}
+
+li:active {
+    background: linear-gradient(#E6E1D7, #D2CDC3, #E6E1D7) repeat scroll 0 0 #E6E1D7;
+}
+
+li[uploaded] {
+    background: linear-gradient(#F0EBE1, #E6E1D7, #F0EBE1) repeat scroll 0 0 #F0EBE1;
+}
+
+li[uploaded]:active {
+    background: linear-gradient(#E6E1D7, #D2CDC3, #E6E1D7) repeat scroll 0 0 #E6E1D7;
+}
+
+li > .mask {
+    background: linear-gradient(#F0EBE1, #E6E1D7, #F0EBE1) repeat scroll 0 0 #F0EBE1;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 70px;
+}
+
+li > .item {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 70px;
+    width: 100%;
+    z-index: 1
+}
+
+li > .item .bugTagLeft {
+    float: left;
+
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+
+    margin: 10px;
+
+    border-radius: 2px;
+    border: solid 1px #2B7CE6;;
+}
+
+li > .item .bugTagRight {
+    float: right;
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+    right: 5px;
+    border-radius: 2px;
+}
+
+li > .item .bugTagRight:active {
+    background: radial-gradient(circle, #D2CDC3, #eae5db);
+}
+
+li > .item .progress {
+    float: right;
+    margin-right: 10px;
+    height: 70px;
+    line-height: 70px;
+    vertical-align: middle;
+    font-size: small;
+}
+
+li > .item .title {
+    float: left;
+    height: 70px;
+    line-height: 70px;
+    max-width: 150px;
+    vertical-align: middle;
+    font-size: medium;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+section[role='region'] > header .assist[rotate] {
+    animation: assist_rotate 2S linear infinite;
+}
+
+#uploadBar {
+    position: fixed;
+    text-align: center;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    outline: none;
+    border: solid 1px #2B7CE6;;
+    font-size: medium;
+    background: linear-gradient(#d48934, #d48934, #d48934) repeat scroll 0 0 #d48934;
+    z-index: 2;
+}
+
+#bug_content[uploading] {
+    margin-top: 45px;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <link rel="stylesheet" href="../css/headers.css">
+    <link rel="prefetch" type="application/l10n" href="../data/locales.ini"/>
+
+    <link rel="stylesheet" href="../css/information.css">
+
+    <script type="text/javascript" src="../js/libs/l10n.js"></script>
+
+    <script type="text/javascript" src="../js/storageDB.js"></script>
+
+    <!--<script type="text/javascript" src="../js/storageLocal.js"></script>-->
+
+    <!--<script type="text/javascript" src="../js/logCore.js"></script>-->
+
+    <script type="text/javascript" src="../js/information.js" defer></script>
+</head>
+
+<body>
+<section role="region">
+    <header>
+        <input id="back" class="icon" type="image" src="../img/back.png">
+        <span id='title' class="title" data-l10n-id="info">信息</span>
+    </header>
+    <div class="content">
+        <ul>
+            <li>
+                <div class="menu optionBG">
+                    <span data-l10n-id="info_local_id">本地编号</span>
+
+                    <span id="recordId" class="assist">
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="menu optionBG">
+                    <span data-l10n-id="info_service_id">服务器编号</span>
+
+                    <span id="tokenId" class="assist">
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="menu optionBG">
+                    <span data-l10n-id="info_module"> 模块</span>
+
+                    <span class="assist" id="log_module">
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="menu optionBG">
+                    <span data-l10n-id="info_title">标题</span>
+
+                    <span class="assist info_title" id="log_title">
+                    </span>
+                </div>
+            </li>
+            <li id="li_storage" hidden>
+                <div id="storage" class="menu optionBG">
+                    <span data-l10n-id="info_local_storage">本地存储</span>
+
+                    <span class="assist" id="log_storage">
+                    </span>
+                </div>
+            </li>
+
+            <li>
+                <div class="menu menuBG menuBorder">
+                    <span data-l10n-id="info_description">描述</span>
+                    <input id="in_description" class="assist img_h20 img_w20" hidden type="image"
+                           src="../img/save1.png">
+                </div>
+                <textarea id="log_description" disabled>
+                </textarea>
+            </li>
+
+            <li id="li_audio" hidden>
+                <div class="menu menuBG menuBorder">
+                    <span data-l10n-id="info_audio">音频描述</span>
+
+                    <div id="btn_stage" class="assist">
+                        <input id="in_revocation" class="img_h20 img_w20" hidden type="image"
+                               src="../img/revocation.png">
+                    </div>
+                </div>
+
+                <div id="div_record" class="option2 optionBorder">
+
+                    <div id="in_record" hidden>
+                        <input id="in_record_start" type="image"
+                               src="../img/start.png">
+                    </div>
+
+                    <audio id="in_audio" class="option2 optionBorder recordAudio" controls/>
+                </div>
+            </li>
+
+            <li id="li_attachment" hidden>
+                <div class="menu menuBG menuBorder">
+                    <span data-l10n-id="info_attachment">附件</span>
+
+                    <input class="assist" id="in_attachment" type="file" accept="image/*" hidden>
+
+                    <div class="assist">
+                        <input id="in_add_att" class="img_h20 img_w20" type="image"
+                               src="../img/add.png" >
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="menu menuBG menuBorder">
+                    <span data-l10n-id="info_other">其他</span>
+                </div>
+                <div class="option2 ">
+                    <span data-l10n-id="info_cpu"> CPU </span>
+                    <label>
+                        <span id="log_cpu" class="assist logRight"></span>
+                    </label>
+                </div>
+                <div class="option2 optionBorder">
+                    <span data-l10n-id="info_network_type"> 网络类型 </span>
+                    <label>
+                        <span id="log_networkType" class="assist logRight"></span>
+                    </label>
+                </div>
+                <div class="option2 optionBorder">
+                    <span data-l10n-id="info_battery"> 电量 </span>
+                    <label>
+                        <span id="log_batteryLevel" class="assist logRight"></span>
+                    </label>
+                </div>
+                <div class="option2 optionBorder">
+                    <span data-l10n-id="info_signal_strength"> 信号强度 </span>
+                    <label>
+                        <span id="log_networkValue" class="assist logRight"></span>
+                    </label>
+                </div>
+                <div class="option2 optionBorder">
+                    <span data-l10n-id="info_create_time"> 创建时间 </span>
+                    <label>
+                        <span id="log_createTime" class="assist logRight"></span>
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+</body>

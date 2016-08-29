@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "name": "LogMan",
+  "description": "A application for Collect fault log",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/img/icons/bug_man_16.png",
+    "48": "/img/icons/bug_man_48.png",
+    "128": "/img/icons/bug_man_128.png"
+  },
+  "developer": {
+    "name": "T2M-VAL",
+    "url": "www.t2mobile.com"
+  },
+ 
+  "permissions": {
+     "mobileconnection":{},
+     "systemXHR":{},
+     "settings":{ "access": "readwrite" },
+     "jrdextension": {},
+     "storage": {},
+     "webapps-manage":{},
+     "wifi-manage": {},
+     "device-storage:sdcard":{ "access": "readwrite" },
+     "desktop-notification":{},
+     "audio-capture":{}
+   },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "locales": {
+    "zh-CN":{
+     "name": "故障反馈",
+     "description": "手机故障收集工具"
+    }
+  },
+  "orientation": "portrait-primary",
+  "default_locale": "en"
+}

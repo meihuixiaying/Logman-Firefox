@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>App Settings</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/headers.css">
+
+    <link rel="prefetch" type="application/l10n" href="../data/locales.ini"/>
+    <script type="text/javascript" src="../js/libs/l10n.js"></script>
+
+    <link rel="stylesheet" href="../css/config.css">
+
+    <script type="text/javascript" src="../js/stage.js"></script>
+
+    <script type="text/javascript" src="../js/wifiStatus.js"></script>
+
+    <script type="text/javascript" src="../js/storageLocal.js"></script>
+
+    <script type="text/javascript" src="../js/logCore.js"></script>
+
+    <script type="text/javascript" src="../js/travel.js"></script>
+
+    <script type="text/javascript" src="../js/config.js"></script>
+
+</head>
+<body>
+<section role="region">
+    <header>
+        <input id="back" class="icon" type="image" src="../img/back.png">
+        <span id='title' class="title" data-l10n-id="module_config"> 配置 </span>
+    </header>
+    <div>
+        <ul>
+            <li>
+                <div class="menu optionBG">
+                    <span data-l10n-id="config_stage"> 注册号 </span>
+
+                    <div id="btn_stage" class="assist">
+                        <input id="in_stage" class="img_h20 img_w20" type="image" src="../img/fresh.png">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="menu optionBG">
+                    <span data-l10n-id="config_notice"> 通知 </span>
+
+                    <div id="btn_notice" class="assist">
+                        <input id="in_notice" class="img_h20 img_w40" type="image" src="../img/closed.png">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="menu optionBG">
+                    <span data-l10n-id="config_run"> 运行状态 </span>
+
+                    <div id="btn_run" class="assist">
+                        <input id="in_run" class="img_h20 img_w40" type="image" src="../img/closed.png">
+                    </div>
+
+                    <span id="tag_logcat" class="assist log logcat logRight" hidden>L</span>
+                    <span id="tag_qxdm" class="assist log qxdm logRight" hidden>Q</span>
+                </div>
+            </li>
+            <li>
+                <div class="menu menuBG menuBorder">
+                    <span data-l10n-id="config_storage"> 存储</span>
+                </div>
+
+                <div class="option1">
+                    <label>
+                        <input id="in_internal" type="radio" name="storage">
+                        <span data-l10n-id="config_storage_internal">Internal_SDCard</span>
+                    </label>
+                    <span id="internal_remainder" class="assist remainder"></span>
+                </div>
+
+                <div class="option1 optionBorder">
+                    <label>
+                        <input id="in_external" type="radio" name="storage">
+                        <span data-l10n-id="config_storage_external">External_SDCard</span>
+                    </label>
+                    <span id="external_remainder" class="assist remainder"></span>
+                </div>
+            </li>
+            <li>
+                <div class="menu menuBG">
+                    <span data-l10n-id="config_run_log"> 默认运行 </span>
+                </div>
+                <div class="option optionBG">
+                    <span data-l10n-id="config_run_qxdm">QXDM</span>
+                    <input id="in_qxdm" class="assist img_h20 img_w20" type="checkbox">
+                    <span id="assist_qxdm" class="assist log qxdm logRight">Q</span>
+                </div>
+                <div id="div_qxdm_size" class="option1">
+                    <span>Size:</span>
+                    <span id="sp_qxdm_size">60</span>
+                    <span>(MB)</span>
+                    <input id="in_qxdm_size" class="assist" min="20" max="160" step="20" disabled type="range">
+                </div>
+                <div id="div_qxdm_cfg" class="option1  optionBorder">
+                    <span>CFG:</span>
+                    <span id="cfg"></span>
+                    <input class="assist" type="checkbox" disabled>
+                </div>
+
+                <div class="option optionBG">
+                    <span data-l10n-id="config_run_logcat">LogCat</span>
+                    <input id="in_logcat" class="assist img_h20 img_w20" type="checkbox">
+                    <span id="assist_logcat" class="assist log logcat logRight">L</span>
+                </div>
+                <div id="div_mms" class="option1">
+                    <span>MMS</span>
+                    <input id="in_logcat_mms" class="assist" type="checkbox">
+                </div>
+                <div id="div_fota" class="option1 optionBorder">
+                    <span>Fota</span>
+                    <input id="in_logcat_fota" class="assist" type="checkbox">
+                </div>
+            </li>
+            <li>
+                <div class="menu menuBG menuBorder">
+                    <span data-l10n-id="config_save_log"> 默认保存故障类型 </span>
+                </div>
+
+                <div class="option2">
+                    <input type="image" class="tag" src="../img/phone.png">
+                    <span data-l10n-id="module_call"> 通话 </span>
+
+                    <label>
+                        <span class="assist log logcat">L</span>
+                        <input id="in_phone_logcat" class="assist" type="checkbox">
+                    </label>
+                    <label>
+                        <span class="assist log qxdm logRight">Q</span>
+                        <input id="in_phone_qxdm" class="assist" type="checkbox">
+                    </label>
+                </div>
+
+                <div class="option2 optionBorder">
+                    <input type="image" class="tag" src="../img/message.png">
+                    <span data-l10n-id="module_message"> 短信 </span>
+
+                    <label>
+                        <span class="assist log logcat">L</span>
+                        <input id="in_message_logcat" class="assist" type="checkbox">
+                    </label>
+                    <label>
+                        <span class="assist log qxdm logRight">Q</span>
+                        <input id="in_message_qxdm" class="assist" type="checkbox">
+                    </label>
+                </div>
+                <div class="option2 optionBorder">
+                    <input type="image" class="tag" src="../img/contacts.png">
+                    <span data-l10n-id="module_contact"> 联系人 </span>
+
+                    <label>
+                        <span class="assist log logcat">L</span>
+                        <input id="in_contact_logcat" class="assist" type="checkbox">
+                    </label>
+                    <label>
+                        <span class="assist log qxdm logRight">Q</span>
+                        <input id="in_contact_qxdm" class="assist" type="checkbox">
+                    </label>
+                </div>
+                <div class="option2 optionBorder">
+                    <input type="image" class="tag" src="../img/network.png">
+                    <span data-l10n-id="module_network"> 网络 </span>
+
+                    <label>
+                        <span class="assist log logcat">L</span>
+                        <input id="in_net_logcat" class="assist" type="checkbox">
+                    </label>
+                    <label>
+                        <span class="assist log qxdm logRight">Q</span>
+                        <input id="in_net_qxdm" class="assist" type="checkbox">
+                    </label>
+                </div>
+                <div class="option2 optionBorder">
+                    <input type="image" class="tag" src="../img/wifi.png">
+                    <span data-l10n-id="module_wifi"> WIFI&BT </span>
+
+                    <label>
+                        <span class="assist log logcat">L</span>
+                        <input id="in_wifi_logcat" class="assist" type="checkbox">
+                    </label>
+                    <label>
+                        <span class="assist log qxdm logRight">Q</span>
+                        <input id="in_wifi_qxdm" class="assist" type="checkbox">
+                    </label>
+                </div>
+                <div class="option2 optionBorder">
+                    <input type="image" class="tag" src="../img/camera.png">
+                    <span data-l10n-id="module_camera"> 相机 </span>
+
+                    <label>
+                        <span class="assist log logcat">L</span>
+                        <input id="in_camera_logcat" class="assist" type="checkbox">
+                    </label>
+                    <label>
+                        <span class="assist log qxdm logRight">Q</span>
+                        <input id="in_camera_qxdm" class="assist" type="checkbox">
+                    </label>
+                </div>
+                <div class="option2 optionBorder">
+                    <input type="image" class="tag" src="../img/apps.png">
+                    <span data-l10n-id="module_apps"> 应用 </span>
+
+                    <label>
+                        <span class="assist log logcat">L</span>
+                        <input id="in_apps_logcat" class="assist" type="checkbox">
+                    </label>
+                    <label>
+                        <span class="assist log qxdm logRight">Q</span>
+                        <input id="in_apps_qxdm" class="assist" type="checkbox">
+                    </label>
+                </div>
+                <div class="option2 optionBorder">
+                    <input type="image" class="tag" src="../img/power.png">
+                    <span data-l10n-id="module_power"> 功耗 </span>
+
+                    <label>
+                        <span class="assist log logcat">L</span>
+                        <input id="in_power_logcat" class="assist" type="checkbox">
+                    </label>
+                    <label>
+                        <span class="assist log qxdm logRight">Q</span>
+                        <input id="in_power_qxdm" class="assist" type="checkbox">
+                    </label>
+                </div>
+                <div class="option2 optionBorder">
+                    <input type="image" class="tag" src="../img/more.png">
+                    <span data-l10n-id="module_others"> 其它 </span>
+
+                    <label>
+                        <span class="assist log logcat">L</span>
+                        <input id="in_other_logcat" class="assist" type="checkbox">
+                    </label>
+                    <label>
+                        <span class="assist log qxdm logRight">Q</span>
+                        <input id="in_other_qxdm" class="assist" type="checkbox">
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="menu optionBG">
+                    <span data-l10n-id="config_version"> 版本号 </span>
+
+                    <div class="assist">
+                        1.0.0
+                    </div>
+                </div>
+            </li>
+            <li style="border: 0">
+                <div style="text-align: center">
+                    ©<span data-l10n-id="config_copyright"></span><br>
+                    <span data-l10n-id="config_all_rights_reserved"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+</body>
+</html>

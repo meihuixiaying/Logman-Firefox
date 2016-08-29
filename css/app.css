@@ -1,0 +1,26 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #FFF6D8;
+    font-size: small;
+    text-align: center;
+}
+
+input {
+    outline: none;
+}
+
+@keyframes assist_rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
